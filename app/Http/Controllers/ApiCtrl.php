@@ -226,17 +226,17 @@ class ApiCtrl extends Controller
     }
 
     public function getBonusTransaction(Request $request) {
-        $datas = BonusTrx::where("to_wallet", $request->wallet)->paginate(10);
+        $datas = BonusTrx::where("to_wallet", $request->wallet)->orderBy('id', 'DESC')->paginate(10);
         return response()->json(['status' => true, 'data' => $datas]);
     }
 
     public function getManagerTransaction(Request $request) {
-        $datas = ManagerTrx::where("to_wallet", $request->wallet)->paginate(10);
+        $datas = ManagerTrx::where("to_wallet", $request->wallet)->orderBy('id', 'DESC')->paginate(10);
         return response()->json(['status' => true, 'data' => $datas]);
     }
 
     public function getPHTransaction(Request $request) {
-        $datas = PhTrx::where("wallet", $request->wallet)->get();
+        $datas = PhTrx::where("wallet", $request->wallet)->orderBy('id', 'DESC')->get();
         return response()->json(['status' => true, 'data' => $datas]);
     }
 
