@@ -17,9 +17,9 @@ class ApiCtrl extends Controller
     public function __construct()
     {
         $this->ph_roi = 30;
-        $this->ref_bonus = 30;
-        $this->manager_bonus = 30; //percent
-        $this->gh_unlocked = 4; //second
+        $this->ref_bonus = 5;
+        $this->manager_bonus = 5; //percent
+        $this->gh_unlocked = 259200; //second
     }
 
     public function storeWallet($wallet, $referal, $status = 0, $is_manager = 0) {
