@@ -1,0 +1,139 @@
+@media (max-width: 1399.98px) {
+  .our-countdown .single-timer.full-width {
+    height: 115px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .hero-areav2 .single-timer h2 {
+    font-size: 49px;
+  }
+  .our-countdown .single-timer.full-width {
+    height: 132px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-areav2 .hero-content h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .hero-areav2 .hero-content {
+    margin-right: 0px;
+  }
+  .mt-sm-30 {
+    margin-top: 30px;
+  }
+  .mb-md-0 {
+    margin-bottom: 0px;
+  }
+  .contact-formv6.contact-form {
+    height: 100%;
+    border-radius: 0px;
+  }
+  .our-countdown .single-timer.full-width {
+    height: 120px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-form {
+    width: 500px;
+    padding: 50px 40px;
+  }
+  .full-wraperv7 .our-countdown .single-timer {
+    height: 226px;
+  }
+  .our-countdown .single-timer.full-width span {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .our-countdownv5 .single-timer {
+    padding: 23px 0px;
+  }
+  .hero-areav2.hero-area {
+    text-align: center;
+  }
+  .hero-areav2 .full-wraper {
+    margin-bottom: 50px;
+  }
+  .copy-rightv2 .footer-social.fellow-social {
+    float: none;
+  }
+  .copy-rightv2 .copy-right-text.f-right {
+    float: inherit;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .full-wraperv6.full-wraper {
+    padding: 50px 15px;
+  }
+}
+@media (max-width: 576.98px) {
+  .sm-mb-15 {
+    margin-bottom: 15px;
+  }
+  .contact-form {
+    width: 317px;
+    padding: 50px 15px;
+  }
+  .contact-form-close {
+    right: 5%;
+  }
+  .info-icon {
+    margin-bottom: 15px;
+  }
+  .subscribe-form form input {
+    width: 300px;
+  }
+  .full-wraperv7 .our-countdown .single-timer {
+    height: 150px;
+    width: 150px;
+  }
+  .single-timer.full-width {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 420px) {
+  .our-countdown .single-timer {
+    padding: 40px 0px;
+  }
+  .hero-areav2 .single-timer h2 {
+    font-size: 40px;
+  }
+  .our-countdown-v2.our-countdown .single-timer p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .subscribe-form form input {
+    width: 212px;
+  }
+  .full-wraperv5.full-wraper {
+    padding: 40px 9px;
+  }
+  .full-wraperv5 .single-timer {
+    padding: 10px 0px;
+  }
+  .full-wraperv3 .hero-content span {
+    font-size: 20px;
+  }
+  .single-timer h2 {
+    font-size: 40px;
+    color: var(--white);
+    position: relative;
+  }
+  .our-countdown-v6.our-countdown .single-timer h2 {
+    font-size: 40px;
+    color: var(--white);
+  }
+  .full-wraperv7 .our-countdown .single-timer.full-width {
+    height: 125px;
+    width: 125px;
+  }
+  .our-countdown .single-timer.full-width span {
+    font-size: 38px;
+    margin-bottom: 4px;
+  }
+}

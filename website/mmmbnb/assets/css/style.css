@@ -1,0 +1,794 @@
+/*
+Theme Name: Casio - Coming Soon HTML5 Template
+Support: rana271199@gmail.com
+Description: Casio - Coming Soon HTML5 Template
+Version: 1.0
+*/
+
+/* CSS Index
+============================
+01.Theme default css
+02.Variable CSS start
+03.default-button-style
+04.bg-style
+05.header-section-style
+06.hero-section-style
+07.footer-section
+08.sidepanel-contact-form
+09.modal-area-start 
+10.preloder-start
+============================ */
+
+/*=============================
+1. Google Fonts
+===============================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700;800&amp;display=swap");
+/*=============================
+01. Theme default css
+===============================*/
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background: var(--white);
+}
+a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+  text-decoration: none;
+}
+a,
+button {
+  outline: medium none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 0px;
+  font-style: normal;
+  text-transform: capitalize;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--p-color);
+  margin-bottom: 0px;
+}
+*::-moz-selection {
+  background: var(--green);
+  color: var(--white);
+  text-shadow: none;
+}
+::-moz-selection {
+  background: var(--green);
+  color: var(--white);
+  text-shadow: none;
+}
+::selection {
+  background: var(--green);
+  color: var(--white);
+  text-shadow: none;
+}
+/*=============================
+02.Variable CSS start
+===============================*/
+:root {
+  --gray: #444;
+  --black: #151515;
+  --white: #ffffff;
+  --green: #33cc99;
+  --white-overly: rgb(255 255 255 / 0.2);
+  --red: rgb(254, 7, 7);
+}
+/*=============================
+03.default-button-style
+===============================*/
+.button-1 button {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--white);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 var(--green);
+}
+.button-1 button:hover {
+  color: var(--white);
+  box-shadow: inset 0 -100px 0 0 var(--green);
+}
+.button-1 button:active {
+  transform: scale(0.9);
+}
+.form-btn.button-1 {
+  text-align: center;
+}
+.form-btn.button-1 button {
+  background: var(--green);
+}
+.form-btn.button-1 button:hover {
+  background: transparent;
+}
+.subscribe-btn button {
+  background: var(--white-overly);
+  color: var(--white);
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.subscribe-btn button:hover {
+  border: 2px solid var(--green);
+}
+.contact-btnv6.contact-btn.button-1 {
+  text-align: center;
+}
+.contact-btnv6.contact-btn.button-1 button {
+  color: var(--black);
+}
+.contact-btnv6.contact-btn.button-1 button:hover {
+  color: var(--white);
+}
+/*=============================
+04.bg-style
+===============================*/
+.full-bg {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+.bg-overly {
+  position: relative;
+}
+.bg-overly::after {
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.8);
+  width: 100%;
+  height: 100vh;
+  content: "";
+}
+/*=============================
+05.header-section-style
+===============================*/
+.main-menu.full-wraper {
+  padding: 30px 0px;
+}
+.sidebar.contact-form-ep {
+  float: right;
+  color: var(--white);
+  font-size: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sidebar.contact-form-ep:hover {
+  color: var(--green);
+}
+/*=============================
+06.hero-section-style
+===============================*/
+.full-wraper {
+  position: relative;
+}
+.full-wraperv5.full-wraper {
+  background-color: rgb(0 0 0 / 0.8);
+  position: relative;
+  padding: 40px;
+  border-radius: 5px;
+}
+.full-wraperv6.full-wraper.text-center {
+  padding: 50px;
+}
+.hero-content span {
+  color: var(--white);
+  background-color: var(--white-overly);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  display: inline-block;
+}
+.full-wraperv3 .hero-content span {
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+.full-wraperv5 .hero-content span {
+  background: none;
+}
+.hero-content h3 {
+  font-size: 50px;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.full-wraperv7 .hero-content h3 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.hero-content p {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+.full-wraperv3 .hero-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.hero-areav2 .hero-content {
+  margin-right: 40px;
+}
+.our-countdown .single-timer {
+  width: 100%;
+  background-color: var(--white-overly);
+  border-radius: 5px;
+  padding: 40px 0px;
+}
+.our-countdown .single-timer.full-width {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.full-wraperv7 .our-countdown .single-timer {
+  border-radius: 500px;
+  border: 2px solid var(--green);
+}
+.our-countdownv3 .single-timer {
+  border-radius: 65% 65% 0% 0%;
+}
+.our-countdownv5.our-countdown {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.our-countdownv5 .single-timer {
+  text-align: center;
+  background: none;
+}
+.our-countdownv5 .single-timer h2 {
+  font-size: 60px;
+  color: var(--white);
+  line-height: 60px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.our-countdownv5 .single-timer h2::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--white-overly);
+  right: -18px;
+  border-radius: 500px;
+  top: 75%;
+}
+.our-countdownv5 .single-timer h2::before {
+  top: 8px;
+}
+.our-countdownv5 .single-timer h2.hours::after {
+  display: none;
+}
+.our-countdownv5 .single-timer h2.hours::before {
+  display: none;
+}
+.our-countdownv5 .single-timer h2.seconds::after {
+  display: none;
+}
+.our-countdownv5 .single-timer p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.our-countdown .single-timer span {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: var(--white);
+  line-height: 26px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.our-countdown .single-timer p {
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.our-countdown-v2.our-countdown .single-timer {
+  padding: 0;
+  text-align: center;
+  background-color: inherit;
+}
+.single-timer h2 {
+  font-size: 60px;
+  color: var(--white);
+  position: relative;
+}
+.single-timer h2::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--white-overly);
+  right: -18px;
+  border-radius: 500px;
+  top: 50%;
+}
+.single-timer h2.seconds:before {
+  display: none;
+}
+.our-countdown-v2.our-countdown .single-timer p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fellow-social span {
+  color: var(--white);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.fellow-social ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fellow-social ul li {
+  margin-right: 10px;
+}
+.fellow-social ul li:last-child {
+  margin: 0px;
+}
+.fellow-social ul li a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  line-height: 42px;
+  background: var(--white-overly);
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: var(--white);
+  position: relative;
+  z-index: 9;
+}
+.copy-rightv3 .fellow-social ul li a {
+  border: 2px solid transparent;
+  border-radius: 50px;
+}
+.fellow-social ul li a i {
+  font-size: 20px;
+}
+.fellow-social ul li a::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--green);
+  top: 0;
+  border-radius: 5px;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  z-index: -9;
+  transform: scaleY(0);
+}
+.fellow-social ul li a:hover::before {
+  transform: scaleY(1);
+}
+.copy-rightv3 .fellow-social ul li a::before {
+  display: none;
+}
+.copy-rightv3 .fellow-social ul li a:hover {
+  border: 2px solid var(--green);
+}
+.fellow-socialv5 ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.fellow-socialv6 ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fellow-socialv5 ul li span {
+  font-size: 20px;
+  color: var(--white);
+  margin-right: 15px;
+}
+.fellow-socialv5 ul li a {
+  font-size: 20px;
+  color: var(--green);
+  line-height: 20px;
+}
+.fellow-socialv5 ul li {
+  margin-right: 10px;
+}
+/*=============================
+07.footer-section
+===============================*/
+.copy-right {
+  position: relative;
+  padding: 10px 0px;
+}
+.copy-right-text a {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: var(--green);
+  font-weight: 400;
+}
+.copy-right-text span {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 300;
+}
+.copy-right-text i {
+  color: var(--red);
+}
+.footer-social.fellow-social {
+  float: left;
+}
+.footer-social.fellow-social ul li a {
+  text-align: center;
+}
+.f-right {
+  float: right;
+}
+/*=============================
+08.sidepanel-contact-form
+===============================*/
+.contact-form-close {
+  position: absolute;
+  right: 13%;
+  cursor: pointer;
+  z-index: 9999;
+}
+.contact-form-close i {
+  font-size: 27px;
+  color: var(--black);
+  transition: all 0.3s ease;
+}
+.contact-form-close:hover i {
+  color: var(--green);
+}
+.contact-form {
+  width: 650px;
+  height: 100vh;
+  background: var(--white);
+  z-index: 9999;
+  position: relative;
+  padding: 50px 80px;
+  overflow-y: scroll;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-formv6.contact-form {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px 0px 0px 10px;
+}
+.contact-form-open {
+  bottom: 0;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: 0.5s;
+  z-index: 99;
+}
+.contact-form-open.active {
+  right: 0;
+}
+.form-content h2 {
+  font-size: 26px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 50px;
+}
+.form-content h2::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: var(--black);
+  bottom: -22px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.form-content span {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray);
+}
+.form-start form input {
+  width: 100%;
+  height: 50px;
+  padding: 0px 20px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.form-start form input:focus {
+  border: 1px solid var(--green);
+}
+.form-start form textarea {
+  width: 100%;
+  min-height: 126px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  padding: 0px 20px;
+  padding-top: 13px;
+}
+.form-start form textarea:focus {
+  border: 1px solid var(--green);
+}
+.outher-contact-info {
+  width: 100%;
+  display: block;
+  margin-top: 110px;
+  position: relative;
+}
+.single-info {
+  text-align: center;
+}
+.arrow-down {
+  position: absolute;
+  top: -68px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--green);
+  margin: auto;
+}
+.info-icon {
+  margin-bottom: 30px;
+}
+.info-icon i {
+  font-size: 36px;
+  color: var(--green);
+}
+.single-info h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.single-info span {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 300;
+  display: block;
+}
+.single-info a {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 300;
+  transition: all 0.3s ease;
+  display: block;
+}
+.single-info a:hover {
+  color: var(--green);
+}
+.google-map-contact {
+  margin-top: 50px;
+}
+.google-map-contact iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+/*=============================
+09.modal-area-start 
+===============================*/
+.subscribe-modal .modal-content {
+  background-color: var(--white);
+}
+.subscribe-modal .modal-header {
+  border: none;
+}
+.subscribe-modal .modal-body {
+  padding: 24px 10px 55px 10px;
+}
+.subscribe-form {
+  text-align: center;
+}
+.subscribe-form h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--gray);
+  margin-bottom: 60px;
+  position: relative;
+}
+.subscribe-form h2::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 43px;
+  background: var(--gray);
+  bottom: -25px;
+  left: 0;
+  margin: auto;
+  right: 0;
+}
+.subscribe-form h2 span {
+  color: var(--green);
+  font-weight: 600;
+}
+.subscribe-form p {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.subscribe-form form input {
+  width: 339px;
+  padding: 14px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+}
+.subscribe-form form input:focus {
+  border: 1px solid var(--green);
+}
+.subscribe-form form button {
+  padding: 14px 24px;
+  border-radius: 5px;
+  border: 1px solid var(--green);
+  background: var(--green);
+}
+.subscribe-form form button i {
+  color: var(--white);
+}
+.subscribe-formv5 form {
+  position: relative;
+}
+.subscribe-formv5 form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid transparent;
+  background: var(--white);
+  border-radius: 5px;
+  padding-right: 109px;
+}
+.subscribe-formv5 form button {
+  position: absolute;
+  right: 3px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 19px;
+  background: var(--green);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+}
+/*=============================
+10.preloder-start
+===============================*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+	background-color: var(--white);
+  z-index: 9999;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--green);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--green);
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--green);
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
