@@ -31,5 +31,8 @@ Route::post('/bonus-ref', [ApiCtrl::class, 'bonusRef']);
 Route::post('/bonus-man', [ApiCtrl::class, 'bonusMan']);
 Route::get('/bonus-referal', [ApiCtrl::class, 'getBonusTransaction']);
 Route::get('/bonus-manager', [ApiCtrl::class, 'getManagerTransaction']);
+Route::post('/register-airdrop', [ApiCtrl::class, 'registerAirdrop']);
+Route::get('/register-airdrop', [ApiCtrl::class, 'registerAirdropByAddress']);
+
 
 

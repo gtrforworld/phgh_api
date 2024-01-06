@@ -8,6 +8,8 @@ use App\Models\BonusTrx;
 use App\Models\ManagerTrx;
 use App\Models\PhTrx;
 use App\Models\Referal;
+use App\Models\AirdropUser;
+use App\Models\AirdropRef;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use DB;
@@ -246,5 +248,87 @@ class ApiCtrl extends Controller
                 ->where("total_referal", ">=", 0)
                 ->orderBy("total_referal", "desc")->limit(10)->get();
         return response()->json(['status' => true, 'data' => $datas]);
+    }
+
+    public function registerAirdrop(Request $request)
+    {
+        try {
+            if(!$request->wallet)  return response()->json(['status' => false, 'data' => "Please provide wallet"]);
+            if(!$request->referral)  return response()->json(['status' => false, 'data' => "Please provide referral"]);
+            if(!$request->signature)  return response()->json(['status' => false, 'data' => "Please provide signature"]);
+    
+            $address = $request->wallet;
+            $checkAddress = AirdropUser::where("address", $address)->first();
+    
+            $bonusAmount = 0.005;
+            $bonusRefAmount = 0.0005;
+    
+            if(!$checkAddress) {
+                $data = New AirdropUser;
+                $data->address = $address;
+                $data->ref_address = $request->referral;
+                $data->hash = $request->signature;
+                $data->bonus = $bonusAmount;
+                $data->joined_date = date('Y-m-d H:i:s');
+                $data->save();
+            }
+            else{
+                if(!$checkAddress->hash) {
+                    $checkAddress->ref_address = $request->referral;
+                    $checkAddress->hash = $request->signature;
+                    $checkAddress->bonus = $bonusAmount;
+                    $checkAddress->joined_date = date('Y-m-d H:i:s');
+                    $checkAddress->save();
+                }
+            }
+    
+            $checkRefIsRegistered = AirdropUser::where("address", $request->referral)->first();
+            
+            $checkBonusIsFromSameAddress = AirdropRef::where("from_address", $address)->first();
+            if(!$checkBonusIsFromSameAddress) {
+                $refBonus = New AirdropRef;
+                $refBonus->from_address = $address;
+                $refBonus->address = $request->referral;
+                $refBonus->amount = $bonusRefAmount;
+                $refBonus->save();
+            }
+            
+            if(!$checkBonusIsFromSameAddress) {
+                if($checkRefIsRegistered) {
+                    // send bonus ref to him 
+                    $checkRefIsRegistered->bonus_referral = $checkRefIsRegistered->bonus_referral + $bonusRefAmount;
+                    $checkRefIsRegistered->save();
+                }
+                else{
+                    // insert new user without ref 
+                    $data = New AirdropUser;
+                    $data->address = $request->referral;
+                    $data->bonus_referral = $bonusRefAmount;
+                    $data->save();
+                }
+            }
+            return response()->json(['status' => true, 'data' => true]);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response()->json(['status' => false, 'data' => $th]);
+        }
+    }
+
+    public function registerAirdropByAddress(Request $request)
+    {
+        if(!$request->wallet)  return response()->json(['status' => false, 'data' => "Please provide wallet"]);
+
+        $user = AirdropUser::select('address AS a', 'bonus AS b', 'bonus_referral AS r')
+            ->where("address", $request->wallet)
+            ->where('ref_address', '!=', '')
+            ->where('hash', '!=', '')
+            ->first();
+
+        if(!$user) {
+            return response()->json(['status' => true, 'available' => true]);
+        }
+        else{
+            return response()->json(['status' => true, 'available' => false, 'data' => $user]);
+        }
     }
 }
