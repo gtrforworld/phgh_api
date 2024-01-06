@@ -12,3 +12,6 @@ class AirdropRef extends Model
     protected $table = 'airdrop_referral'; // Set the table name
     // protected $primaryKey = 'address';
 }
+
+ 
+// s
